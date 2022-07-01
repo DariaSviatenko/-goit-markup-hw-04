@@ -129,11 +129,17 @@ ul {
 }
 
 .menu-contacts-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--paragraph-color);
   text-decoration: none;
+}
+
+.menu-contacts-link:hover svg {
+  fill: var(--accent-color);
 }
 
 .menu-contacts-link:hover {
@@ -229,9 +235,8 @@ p {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
-  padding-top: 30px;
 }
 
 .benefits-description {
@@ -320,7 +325,8 @@ section.description {
 
 .social-network-list {
   display: flex;
-  margin: 0 32px 30px;
+  margin: 0 0 30px;
+  justify-content: center;
 }
 
 .social-network-icons {
@@ -344,8 +350,12 @@ section.description {
   border-radius: 50%;
 }
 
-.social-network {
+.social-network-link .social-network {
   fill: #afb1b8;
+}
+
+.social-network {
+  fill: #ffffff;
   width: 20px;
   height: 20px;
 }
@@ -380,8 +390,6 @@ section.description {
   padding-left: 0;
   margin: 0;
   padding-bottom: 0;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   width: 170px;
   height: 92px;
   display: flex;
@@ -389,19 +397,27 @@ section.description {
   align-items: center;
 }
 
-.clients-icons {
+.clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.clients-name {
-  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
   width: 100%;
   height: 100%;
 }
 
-.clients-name:hover {
+.clients-name {
+  fill: #afb1b8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-link:hover svg,
+.clients-link:focus svg {
   fill: var(--accent-color);
 }
 
@@ -410,8 +426,12 @@ section.description {
   padding: 60px 0;
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-content {
-  display: inline-block;
   padding-top: calc(60px - 94px);
   padding-bottom: calc(60px - 94px);
 }
@@ -445,7 +465,6 @@ section.description {
   display: inline-block;
   vertical-align: top;
   margin-left: 70px;
-  margin-top: 12px;
   justify-content: center;
 }
 
@@ -476,6 +495,7 @@ section.description {
 }
 
 .footer-social-network-name {
+  font-weight: 700;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -561,14 +581,19 @@ section.description {
   text-align: left;
 }
 
-.list-portfolio-photo:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-}
-
 .list-portfolio-photo div {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+.list-portfolio-link {
+  display: block;
+  text-decoration: none;
+}
+
+.list-portfolio-link:hover,
+.list-portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
